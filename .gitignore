@@ -1,0 +1,10 @@
+# Build outputs
+*.o
+campus_compute
+
+# Runtime outputs
+campus_compute.log
+rlimit_test_scratch.tmp
+
+# Submission evidence (keep the student's SRN PDF outside source repo if desired)
+*.pdf
