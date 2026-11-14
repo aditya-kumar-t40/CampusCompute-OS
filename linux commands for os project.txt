@@ -1,0 +1,94 @@
+whoami
+
+ls
+
+sudo apt update
+sudo apt install git build-essential zip -y
+
+git clone https://github.com/aditya-kumar-t40/CampusCompute-OS.git
+
+cd CampusCompute-OS
+
+ls -la
+
+git remote -v
+
+make
+
+ls -lh campus_compute
+
+before every screenshot use clear
+
+export SRN='PES1UG25CS036'
+export PS1="[$SRN] \w\$ " (without colour)
+export PS1="\[\e[1;32m\][${SRN}]\[\e[0m\] \[\e[1;34m\]\w\[\e[0m\]\$ "  (with colour)
+
+uname -a
+pwd
+
+gcc --version
+make --version
+zip --version | head -n 1
+
+ls -la
+
+make clean && make
+
+./campus_compute help
+
+./campus_compute fcfs
+
+./campus_compute rr 2
+
+./campus_compute priority
+
+./campus_compute compare 2
+
+./campus_compute logger
+
+./campus_compute logger | grep -E "SYNC-WAIT|THREAD-EXIT|LOGGER SUMMARY"
+
+./campus_compute ipc
+
+./campus_compute sem
+
+./campus_compute banker-safe
+
+./campus_compute banker-unsafe
+
+./campus_compute worker-ok
+
+./campus_compute worker-fail
+
+./campus_compute rlimit
+
+./campus_compute invalid_cmd
+./campus_compute rr -5
+./campus_compute custom-sched 2 1,0,-3,1 2,1,4,2
+
+./campus_compute cleanup && ls -la /dev/shm
+
+./campus_compute all
+
+or
+
+./campus_compute all > all_output.txt 2>&1
+clear
+tail -n 35 all_output.txt
+
+ls -lh campus_compute.log && cat campus_compute.log
+
+or
+
+clear
+ls -lh campus_compute.log
+tail -n 12 campus_compute.log
+
+ls -la
+
+zip -r CampusCompute_Submission.zip Makefile README.md campus_compute.h *.c
+unzip -l CampusCompute_Submission.zip
+zip -T CampusCompute_Submission.zip
+
+ctrl+end for end results
+
